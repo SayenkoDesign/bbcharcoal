@@ -247,7 +247,6 @@ add_action('woocommerce_after_shop_loop_item_title', 'woocommerce_show_product_l
 remove_action('woocommerce_before_single_product_summary', 'woocommerce_show_product_sale_flash', 10 );
 add_action('woocommerce_single_product_summary', 'woocommerce_show_product_sale_flash', 5 );
 
-
 //WooCom theme support functions
 add_action( 'after_setup_theme', 'sayenko_remove_theme_support', 100 );
 
