@@ -1,0 +1,49 @@
+// Staff
+
+.section-staff {
+    
+    .column {
+        text-align: center;   
+    }
+        
+    .column-block {
+        margin-bottom: rem-calc(25);   
+    }
+    
+    .element-photo {
+        max-width: 320px;
+        margin: 0 auto $global-margin;   
+    }
+    
+    header {
+        margin-bottom: $global-margin;
+        
+        h3 {
+            margin-bottom: 0;   
+        }
+    }
+    
+    
+    p {
+        font-family: Montserrat;  
+        margin-bottom: $global-margin; 
+    }
+   
+    
+    @include breakpoint(large) {
+    
+        .column-block {
+            margin-bottom: 0;   
+        }
+        
+        .column:not(.row):first-child {
+            padding-right: rem-calc(map-get($grid-column-gutter, large)*1);  
+        }
+        
+        .column:not(.row):last-child {
+            padding-left: rem-calc(map-get($grid-column-gutter, large)*1);  
+        }
+    }
+    
+    
+}

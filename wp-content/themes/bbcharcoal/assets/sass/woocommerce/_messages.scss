@@ -1,0 +1,19 @@
+.woocommerce-notices-wrapper {
+  text-align: center;
+  background: $light-gray;
+
+  .woocommerce-message {
+    padding: 25px 0;
+
+    .button {
+      background-color: $red;
+      display: block;
+      width: 185px;
+      margin: auto;
+
+      &:hover {
+        background-color: $light-red;
+      }
+    }
+  }
+}

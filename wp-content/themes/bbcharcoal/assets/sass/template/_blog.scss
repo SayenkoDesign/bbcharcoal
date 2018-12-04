@@ -1,0 +1,170 @@
+/* CSS Document */
+
+.blog {
+
+    .section-hero {
+        &:after {
+            display: block!important;
+        }
+    }
+
+    @include breakpoint(large) {
+        #primary {
+            padding-bottom: 45px;
+        }
+    }
+
+}
+
+.blog,
+.team-related-posts {
+
+    .post-hero {
+        background: $gray;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        padding-top: 80%;
+     }
+
+    article {
+
+        border: 2px dotted #E0C68A;
+
+        margin-bottom: rem-calc(map-get($grid-column-gutter, small)/2);
+
+        &include breakpoint(large) {
+            margin-bottom: rem-calc(map-get($grid-column-gutter, large)/2);
+        }
+
+        .entry-content,
+        .entry-footer {
+            padding: rem-calc(map-get($grid-column-gutter, small)/2);
+
+            &include breakpoint(large) {
+                padding: rem-calc(map-get($grid-column-gutter, large)/2);
+            }
+        }
+
+        .entry-footer {
+            padding-top: 0;
+        }
+
+        h3 {
+            text-align: center;
+
+            a {
+                color: $red;
+
+                &:hover {
+                    color: $light-red;
+                }
+            }
+        }
+
+        .more {
+            color: $red;
+            text-transform: uppercase;
+            font-family: 'Oswald', sans-serif;
+            letter-spacing: 1px;
+            font-size: 20px;
+            line-height: 21px;
+
+            &:hover {
+                color: $light-red;
+            }
+
+        }
+    }
+
+}
+
+.filters {
+
+    margin: $global-margin 0 $global-margin;
+
+    @include breakpoint(large) {
+        margin: $global-margin 0 0;
+    }
+
+
+    > * {
+        display: block;
+        margin-bottom: 0!important;
+
+        padding: $global-padding ($global-padding/2);
+
+        @include breakpoint(large) {
+            display: inline-block;
+            margin-bottom: $global-margin!important;
+        }
+    }
+
+    span {
+        color: $red;
+        @extend h3;
+        margin: 0 5px 0 0;
+        line-height: 40px;
+        position: relative;
+        top: 4px;
+    }
+
+    select {
+        outline: none;
+        background-color: #fff;
+        -webkit-appearance: none;
+        -webkit-border-radius: 0px;
+        background-image: url("data:image/svg+xml;utf8,<svg width='16' height='9' viewBox='0 0 16 9' xmlns='http://www.w3.org/2000/svg'><title>Fill 4</title><path d='M.758.75C.588.91.5 1.13.5 1.343c0 .212.09.433.258.594l6.617 6.316c.17.16.392.246.624.246.23 0 .453-.085.622-.246l6.617-6.316c.347-.33.347-.858 0-1.19-.348-.33-.9-.33-1.247 0L8 6.47 2.004.75C1.658.427 1.097.427.758.75z' fill='#969696' fill-rule='evenodd'/></svg>");
+        background-position: 96% 50%;
+        background-repeat: no-repeat;
+        padding: 8px 30px;
+        font-size: 13px;
+        border: 2px solid #969696;
+        height: 40px;
+    }
+
+    button {
+        padding: 8px 30px;
+    }
+}
+
+
+.facetwp-pager {
+
+    @include clearfix;
+    margin-bottom: 45px;
+
+    a {
+        padding: 0;
+        width: 33px;
+        height: 33px;
+        border-radius: 50%;
+        border: 2px dotted $red;
+        position: relative;
+
+        @include breakpoint(large) {
+            width: 66px;
+            height: 66px;
+        }
+    }
+
+    svg {
+        width: 15.5px;
+        height: 11px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+
+        @include breakpoint(large) {
+            width: 31px;
+            height: 22px;
+        }
+    }
+
+    .next {
+        float: right;
+    }
+
+}

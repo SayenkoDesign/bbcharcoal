@@ -1,0 +1,63 @@
+// Section Logos
+
+
+.section-logos {
+    
+    margin-top: 0;
+    padding-bottom: 35px;
+    
+    @include breakpoint(xlarge down) {
+        .logos {
+            padding: 0 80px;   
+        }
+    }
+    
+    .slick-prev {
+        left: 15px;
+    }
+    .slick-next {
+        right: 15px;
+    }
+    
+   @include breakpoint(xxlarge) {
+        .slick-prev {
+            left: -66px;
+        }
+        .slick-next {
+            right: -66px;
+        }
+   }
+         
+    .logo {
+        display: table!important;
+        height: 120px;
+        
+        a,
+        span {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;  
+            padding: 0 10px;
+            
+            img {
+                display: inline-block;   
+            }
+            
+            img:hover {
+              transition: .5s ease-in-out;
+              filter: grayscale(0%);
+            } 
+            
+            img {
+              filter: grayscale(100%);
+            }
+        }
+    }
+    
+    img {
+        //max-width: 280px;
+        height: auto;  
+         
+    }
+    
+}

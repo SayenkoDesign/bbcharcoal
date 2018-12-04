@@ -1,0 +1,87 @@
+// Blog Articles
+
+
+.team-related-posts {
+    
+    @include breakpoint(large) {
+        margin-bottom: -5%!important;
+        margin-top: -5%!important;
+    }
+    
+    .wrap {
+        background-color: $light-gray;   
+        
+        .row {
+            padding-top: 45px;  
+            padding-bottom: 45px;  
+        }
+    }
+    
+    .point img {
+        width: 100%;   
+    }
+    
+    header {
+        text-align: center; 
+        
+        img {
+            margin-bottom: 20px;   
+        }
+        
+        h2 {
+            color: $red;
+            margin-bottom: 30px;
+            span {
+                font-size: 20px;
+                border-bottom: 3px solid $red;
+                position: relative;
+                top: -7px;
+                padding: 0 2px;
+            }   
+        }
+    }
+ 
+    article {
+       background-color: #fff;   
+    }
+    
+    .slick-posts {
+        
+        .slick-slide {
+            
+            @include breakpoint(600px) {
+                padding: 0 6px;   
+            }
+        }
+
+        
+        .slick-arrow {
+            z-index: 3;   
+        }
+        
+        .slick-next,
+        .slick-prev {
+            bottom: -33px;
+            top: auto;
+            transform: none;
+            
+            @include breakpoint(large) {
+                bottom: -66px;
+            }
+        }
+        
+        .slick-prev {
+            left: 6px;
+        }
+        .slick-next {
+            right: 6px;
+        }
+           
+    }
+    
+    
+}
+
+
+
+

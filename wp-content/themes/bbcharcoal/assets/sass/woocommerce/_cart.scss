@@ -1,0 +1,74 @@
+.woocommerce-cart {
+  .entry-content .woocommerce {
+    display: flex;
+    flex-wrap: wrap;
+
+    .woocommerce-notices-wrapper {
+      flex: 0 0 100%;
+    }
+    .woocommerce-cart-form {
+      flex: 0 0 60%;
+
+      .shop_table {
+        th {
+          text-align: left;
+        }
+
+        tr.cart_item td {
+          padding: 10px  20px 10px 0;
+
+          &.product-thumbnail {
+            padding: 10px 20px;
+
+            img.attachment-woocommerce_thumbnail {
+              height: 150px;
+              width: 150px;
+            }
+          }
+        }
+
+        .button {
+          margin-left: 49px;
+          background-color: $red;
+          color: $white;
+
+          &:hover {
+            background-color: $light-red;
+          }
+        }
+      }
+    }
+
+    .cart-collaterals {
+      flex: 0 0 40%;
+
+      .cart_totals {
+        background: #f3f1ee;
+        padding: 30px;
+
+        .shop_table_responsive {
+          text-align: left;
+
+          td {
+            padding: 15px;
+
+            &[data-title='Subtotal'],
+            &[data-title='Tax'],
+            &[data-title='order-total'] {
+              text-align: right;
+            }
+          }
+        }
+
+        .checkout-button {
+          background-color: $red;
+          color: $white;
+
+          &:hover {
+            background-color: $light-red;
+          }
+        }
+      }
+    }
+  }
+}

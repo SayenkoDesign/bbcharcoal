@@ -1,0 +1,294 @@
+// Team Post
+
+.single-team {
+ 
+    .section-hero {
+     
+        .row {
+            min-height: 200px;   
+            
+            @include breakpoint(large) {
+                min-height: 336px;   
+            }
+        }
+        
+        .caption {
+            display: none;   
+        }
+        
+    }
+    
+    .team-navigation .column {
+        position: relative;
+        
+        @include breakpoint(large) {
+            padding: 15px 0;
+        }   
+    }
+    
+    .nav-links {
+        @extend .clear;
+        z-index: 9;
+        
+        
+        > div {
+            display: inline-block;
+            padding: 10px 50px;
+            
+            @include breakpoint(large) {
+                padding: 0;
+            }
+            
+         }
+     
+        a {
+            padding: 0;   
+            width: 33px;
+            height: 33px;
+            border-radius: 50%;
+            border: 2px dotted $red;
+            display: block;
+            
+            @include breakpoint(large) {
+                width: 66px;
+                height: 66px;
+            }
+        }
+        
+        
+        svg {
+            width: 15.5px;
+            height: 11px;   
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            
+            @include breakpoint(large) {
+                width: 31px;
+                height: 22px;   
+            }
+        }
+        
+        .nav-next a {
+            
+            position: relative;
+            
+            @include breakpoint(large) {
+                right: rem-calc(map-get($grid-column-gutter, large)/2); 
+                
+                position: absolute; 
+                top: 50%;
+                //right: rem-calc(map-get($grid-column-gutter, small)/2); 
+                transform: translateY(-50%);  
+            }
+        }
+        
+        .nav-previous a {
+            
+            position: relative;
+            
+            @include breakpoint(large) {
+                left: rem-calc(map-get($grid-column-gutter, large)/2); 
+                
+                position: absolute; 
+                top: 50%;
+                //left: rem-calc(map-get($grid-column-gutter, small)/2); 
+                transform: translateY(-50%);
+            }  
+        }
+        
+    }
+    
+    
+    .site-main {
+        
+        header {
+            
+            h1 {
+                margin-bottom: 0;   
+            }
+            h4 {
+                text-transform: none;
+                margin-bottom: 0;  
+            }
+            
+            margin-bottom: 40px;
+        }
+     
+        .social-icons {
+            margin-top: $global-margin;
+            height: 36px;
+              
+            li {
+               display: inline-block;
+               padding: 0 15px 0 0;   
+               height: 36px;
+              
+            }
+            
+            a {
+                transition: $transition;
+                width: 36px;
+                height: 36px;
+                display: block;
+                background-color: $red;
+                border-radius: 50%;
+                position: relative;
+                &:hover {
+                    background-color: $light-red;
+                    border-radius: 50%;
+                    &:hover {
+                        svg {
+                            fill: $white;   
+                        }
+                    }
+                }
+            }
+            
+            svg {
+                width: auto;
+                height: 28px;
+                fill: $white;  
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);  
+            }    
+           
+        }
+        
+        
+        
+        .intro {
+            p {
+                font-size: 18px;
+                line-height: 32px;
+                color: $dark-gray;  
+                margin-bottom: $global-margin; 
+                font-family: $header-font-family;
+                text-transform: uppercase;
+                
+                &:first-child:first-letter {
+                    font-size: 56px;
+                    line-height: 42px; 
+                    float: left;
+                    padding-top: 8px;
+                    padding-right: 8px;
+                    padding-left: 3px;  
+                } 
+                
+                @include breakpoint(large) {
+                    font-size: 24px;
+                    
+                    &:first-child:first-letter {
+                        font-size: 72px;   
+                    }
+                }
+            }
+        }
+        
+        .entry-content {
+            
+            img {
+                
+                box-shadow: 0 0 13px 2px rgba(40,36,37,0.5);
+                
+            }
+        }
+
+        
+    }
+    
+    .section-content {
+        
+        .point img {
+            width: 100%;   
+        }
+        
+        &:nth-child(odd) {
+            .wrap {
+                background-color: $light-gray;
+                padding: 45px 0 25px;   
+            }
+            
+            @include breakpoint(large) {
+                
+                .column:first-child {
+                    padding-left: rem-calc(map-get($grid-column-gutter, large)*3);  
+                    
+                    .header,
+                    .entry-content {
+                        padding-right: 25%;
+                    }
+                    
+                    .entry-content {
+                        //padding-bottom: 100px;   
+                    }
+                }
+                
+            }
+        }
+        
+        &:nth-child(even) {
+            .point {
+                display: none;   
+            }
+            
+            @include breakpoint(large) {
+                
+                .column:first-child {
+                    padding-right: rem-calc(map-get($grid-column-gutter, large)*3);  
+                    .header,
+                    .entry-content {
+                        padding-left: 25%;
+                    }
+                    
+                    .entry-content {
+                        // padding-bottom: 100px;   
+                    }
+                }
+                                
+            }  
+        }
+    }
+    
+    
+    .all {
+        
+        line-height: 33px;
+        
+        @include breakpoint(large) {
+            line-height: 66px;
+        }
+        
+        a {
+            position: relative;
+            padding-left: 30px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 13px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            
+            &:before {
+                content: '';
+                   width: 24px;
+                   height: 24px;
+                   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'%3E%3Cg fill='%23FFFFFF' fill-rule='evenodd' stroke='%23CD2533' stroke-width='2' transform='translate%28-623.000000, -3281.000000%29 translate%28623.000000, 3281.000000%29'%3E%3Crect width='9' height='9' x='1' y='1' rx='4.5'/%3E%3Crect width='9' height='9' x='1' y='14' rx='4.5'/%3E%3Crect width='9' height='9' x='14' y='1' rx='4.5'/%3E%3Crect width='9' height='9' x='14' y='14' rx='4.5'/%3E%3C/g%3E%3C/svg%3E");
+                   position: absolute;
+                   top: 50%;
+                   transform: translateY(-50%);
+                   left: 0;
+            }
+            
+            &:hover {
+                &:before {
+                    
+                   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' viewBox='0 0 24 24'%3E%3Cg fill='%23FFFFFF' fill-rule='evenodd' stroke='%23a41e29' stroke-width='2' transform='translate%28-623.000000, -3281.000000%29 translate%28623.000000, 3281.000000%29'%3E%3Crect width='9' height='9' x='1' y='1' rx='4.5'/%3E%3Crect width='9' height='9' x='1' y='14' rx='4.5'/%3E%3Crect width='9' height='9' x='14' y='1' rx='4.5'/%3E%3Crect width='9' height='9' x='14' y='14' rx='4.5'/%3E%3C/g%3E%3C/svg%3E");
+                     
+                }
+            }
+        }
+    }
+    
+}

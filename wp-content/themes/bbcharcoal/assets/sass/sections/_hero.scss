@@ -1,0 +1,178 @@
+
+
+.section-hero {
+    
+    position: relative;
+    background-color: $light-gray;
+    
+    margin-top: 0;
+    
+    .wrap {
+        
+        .row {
+            padding: 32px 0;   
+            
+            @include breakpoint(large) {
+                padding: 75px 0;    
+            }
+        }
+    }
+    
+    .caption {
+        margin: 0 auto;
+        text-align: center;
+    }
+    
+    h1 {
+        color: $red;
+        margin-bottom: 0;
+    }
+    
+        
+    &.hero-background {
+        
+        background-color: $dark-gray;
+        
+        .wrap {
+            background-size: cover;
+            text-align: center; 
+            position: relative;   
+            
+            .row {
+                // min-height: 300px;     
+            }
+        }
+        
+        h1 {
+            color: #fff;
+            margin-bottom: 0;
+        }
+        
+    }
+    
+    .background-overlay {
+        
+        &:after {
+            content: '';
+            background-color: rgba( $red, 0.7);
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .caption {
+            position: relative;
+            z-index: 3;   
+        }
+    }
+       
+    
+    
+    
+}
+
+
+.home .section-hero {
+ 
+    .wrap {
+        background-size: cover;
+        
+        text-align: center;
+        
+        
+    }
+        
+    .caption {
+        
+    }
+    
+    h1 {
+        color: #fff;
+        margin-bottom: 0;
+        
+    }
+    
+    h3 {
+        color: $gold;
+        display: inline-block;
+        position: relative;
+        padding: 0 62px;
+        
+        &:before {
+            content: '';
+            width: 58px;
+            height: 2px;
+            background-color: $gold;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -5px;
+               
+        }
+        
+        &:after {
+            content: '';
+            width: 58px;
+            height: 2px;
+            background-color: $gold;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            margin-top: -5px;
+               
+        }
+        
+        span {
+            &:before {
+                content: '';
+                width: 38px;
+                height: 2px;
+                background-color: $green;
+                position: absolute;
+                top: 50%;
+                left: 20px;
+                margin-top: 2px;
+                   
+            }
+            
+            &:after {
+                content: '';
+                width: 38px;
+                height: 2px;
+                background-color: $green;
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                margin-top: 2px;
+                   
+            }   
+        }
+    }
+       
+}
+
+
+.page-template-default,
+body:not(.home) {
+    
+    .section-hero {
+        position: relative;
+        
+        &:after {
+            content: '';
+            width: 100%;
+            height: 10px;
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            background-image: url(assets/images/tear-bottom.png);
+            background-size: cover;
+            z-index: 2;
+        }
+    }
+    
+}

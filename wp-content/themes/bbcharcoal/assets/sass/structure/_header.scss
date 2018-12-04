@@ -1,0 +1,305 @@
+/*
+Header
+---------------------------------------------- */
+
+// Fix for sticky header
+.logged-in .site-header.fixed {
+    top: 46px;
+
+    @media screen and (min-width: 783px) {
+        top: 32px;
+    }
+ }
+
+
+.site-header {
+
+    width: 100%;
+    z-index: 999;
+
+    .wrap {
+        position: relative;
+        background: #fff;
+
+        @include breakpoint(large) {
+            background: $dark-gray;
+
+            &:after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 6px;
+                background-image: url(assets/images/header/after.png);
+                background-repeat: repeat-x;
+                background-position: center;
+                z-index: 999;
+                position: absolute;
+                bottom: -6px;
+                left: 0;
+            }
+        }
+
+
+        .align-bottom {
+            @include breakpoint(large) {
+                padding: 0;
+            }
+        }
+
+        @include breakpoint(large) {
+            .row:first-child {
+                border-bottom: 1px dashed #979797;
+            }
+
+            .row:last-child {
+                padding-top: 15px;
+            }
+        }
+
+    }
+
+
+
+    .wrap {
+
+         .columns {
+            position: relative;
+            min-height: 1px;
+
+        }
+
+        .site-branding {
+            border-bottom: 1px solid $dark-gray;
+            text-align: center;
+
+            @include breakpoint(large) {
+                border-bottom: none;
+                text-align: left;
+            }
+        }
+
+        .site-title {
+
+            display: inline-block;
+
+            padding: 5px 20px;
+
+
+            @include breakpoint(medium) {
+                padding-left: rem-calc(map-get($grid-column-gutter, medium) /2 );
+            }
+
+             @include breakpoint(large) {
+                padding: 18px 20px;
+                position: absolute;
+                top: 0;
+                left: rem-calc(map-get($grid-column-gutter, medium) /2 );
+                transform: translateY(-50%);
+            }
+
+            @include breakpoint(xxxlarge) {
+                transform: translateY(-100%);
+            }
+
+            @include breakpoint(large) {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            a {
+                display: block;
+            }
+        }
+
+        .before-header-widgets {
+
+            display: flex;
+
+            .be-social-widget {
+              padding: 7px 0;
+            }
+
+            .menu li {
+                display: inline-block;
+                margin-right: -4px;
+
+                a {
+                    @include button;
+                    color: #fff;
+                    border-left: 1px dashed #979797;
+                    position: relative;
+                    font-family: 'Oswald', sans-serif;
+
+                    &:before {
+                        content: '';
+                        display: block;
+                        background-image: url("data:image/svg+xml;utf8, <svg width='17px' height='24px' viewBox='0 0 17 24' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+                            <defs>
+                                <polygon id='path-1' points='13 37 0 37 0 0 13 0 26 0 26 37 13 37'></polygon>
+                            </defs>
+                            <g id='Header' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'>
+                                <g id='Navigation' transform='translate(-1304.000000, -7.000000)'>
+                                    <g id='Group-6' transform='translate(1301.000000, -1.000000)'>
+                                        <g id='location-pin'>
+                                            <g id='find-a-club'>
+                                                <mask id='mask-2' fill='white'>
+                                                    <use xlink:href='#path-1'></use>
+                                                </mask>
+                                                <g id='Clip-2'></g>
+                                                <path d='M18.0393813,14.5841667 C17.9694033,14.3242471 17.8283626,14.047288 17.7236669,13.8044079 C16.4743713,10.8103289 13.7441476,9.73684211 11.5393008,9.73684211 C8.58856527,9.73684211 5.33811816,11.7104459 4.90360412,15.7780117 L4.90360412,16.608348 C4.90360412,16.6432383 4.91526711,16.9548173 4.9320835,17.1111477 C5.17592128,19.0487792 6.71001081,21.1092032 7.85542453,23.0479167 C9.08763258,25.1248392 10.3664926,27.1682237 11.6334183,29.2105263 C12.4153809,27.8771199 13.1940886,26.5269444 13.9570649,25.2284284 C14.1656425,24.8481506 14.4073104,24.4678728 14.6150743,24.104364 C14.753674,23.8612135 15.0197528,23.6194152 15.1404511,23.394386 C16.3726592,21.1440936 18.3572654,18.8767617 18.3572654,16.6432383 L18.3572654,15.7260819 C18.3572654,15.4842836 18.0561977,14.635826 18.0393813,14.5841667 Z M11.5336163,19.0503432 C10.6379989,19.0503432 9.65811115,18.6099621 9.17460654,17.3924377 C9.10237481,17.1987031 9.10797417,16.8101315 9.10797417,16.7745813 L9.10797417,16.2275496 C9.10797417,14.6762946 10.4465008,13.9702517 11.6111674,13.9702517 C13.0440433,13.9702517 14.1529963,15.0995896 14.1529963,16.5108486 C14.1529963,17.9221077 12.9673321,19.0503432 11.5336163,19.0503432 Z' id='Fill-1' stroke='#CD2533' stroke-width='2' mask='url(#mask-2)'></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>");
+                        background-repeat: no-repeat;
+                        width: 18px;
+                        height: 21px;
+                        position: absolute;
+                        top: 50%;
+                        left: 14px;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+
+
+    .menu-toggle {
+        position: absolute;
+        top: 33px;
+        right: rem-calc(map-get($grid-column-gutter, small) /2 );
+        z-index: 999;
+
+        @include breakpoint(medium) {
+            right: rem-calc(map-get($grid-column-gutter, medium) /2 );
+        }
+    }
+
+
+
+
+}
+
+.site-header .header-widgets {
+    text-align: right;
+
+    .social-icons {
+        li {
+            padding: 0 5px;
+        }
+
+        @include breakpoint(xxxlarge) {
+            height: 64px;
+            li {
+                height: 64px;
+                padding: 16px 5px;
+            }
+        }
+    }
+}
+
+.site-header {
+
+	&.fixed {
+		display: none;
+
+		@media #{$xlarge-up} {
+      		display: block;
+		}
+
+		transition: transform .25s ease-in-out;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		z-index: 999;
+		transform: translateY(-150%);
+		background-color: white;
+		box-shadow: 0px 1px 4px #888888;
+
+        .wrap {
+            position: relative;
+            top: auto;
+
+            @include breakpoint(large) {
+                .row:last-child {
+                    padding-top: 0;
+                }
+            }
+
+            .site-title {
+                @include breakpoint(large) {
+
+                    img {
+                        width: 80px;
+                    }
+                }
+
+                @include breakpoint(large) {
+                    transform: translateY(-40%);
+                }
+
+                @include breakpoint(xxxlarge) {
+                    transform: translateY(-110%);
+                }
+            }
+        }
+
+        .widget_text {
+
+            .widget-title {
+                color: $red;
+            }
+
+            > div {
+                a {
+                    color: $red;
+                }
+            }
+
+        }
+
+	}
+
+	&.fixed.fixed-show {
+		transform: translateY(0);
+
+    .header-cart {
+      width: 70px;
+      height: 66px;
+    }
+	}
+
+  .relative-parent{
+    position: relative;
+  }
+
+  .header-cart {
+    color: #fff;
+    background: $red;
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 0;
+    right: auto;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Oswald', sans-serif;
+
+    @include breakpoint(large) {
+      width: 80px;
+      height: 80px;
+      right: 0;
+      left: auto;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+// Footer CTA
+
+.section-footer-cta {
+    
+    margin-top: 0;
+    text-align: center;
+    
+    p {
+        font-weight: 300;
+        margin-bottom: $global-margin;   
+    }
+    
+    a[href*="tel"] {
+        color: $gold;
+        font-family: Montserrat;
+        font-size: 24px;
+        line-height: 33px;
+    }
+    
+}

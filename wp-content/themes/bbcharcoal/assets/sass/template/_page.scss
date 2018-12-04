@@ -1,0 +1,52 @@
+html, body {
+	height: 100%;
+    //background: $dark-gray;
+    
+    #content {
+        background: #fff;   
+    }
+      
+}
+
+body {
+   &:focus {
+      outline: none!important;
+   }
+}
+
+#wpadminbar {
+    z-index: 999999;   
+}
+
+
+button:focus {
+    outline: none;   
+}
+
+#primary section:last-child {
+    margin-bottom: 45px;   
+}
+
+
+
+
+// custom styles
+/*
+:not(.home) {
+    
+    .section-2.background-dark .wrap {
+        padding-bottom: 90px;   
+    }
+}
+*/
+
+
+.point {
+
+    line-height: 0;
+    
+    img {
+        display: block;   
+    }
+
+}

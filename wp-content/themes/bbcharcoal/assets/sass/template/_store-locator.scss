@@ -1,0 +1,38 @@
+// Store Locator
+
+.template-store-locator {
+    
+    .section-hero {
+        
+        .wrap .row {
+            padding: 45px 0 0;
+        }
+        
+        &:after {
+            display: none;   
+        }
+    }
+    
+    section.default {
+       background: $light-gray;
+        margin-top: 0;
+        margin-bottom: 0!important;
+        padding-bottom: 90px;
+    }
+    
+    
+    .site-footer {
+            
+        &:before {
+            background-image: url(assets/images/tear-top-alt.png);
+
+        }
+
+    }
+	
+}
+
+
+.wpgmza_sl_radius_select {
+    width: auto;
+}

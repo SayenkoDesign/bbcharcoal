@@ -1,0 +1,38 @@
+// Before Header
+
+.before-header {
+    
+    border-bottom: 1px solid $light-gray;
+    
+    h5 {
+        color: $gold;
+        font-size: rem-calc(13);   
+        font-weight: 300;
+        line-height: 1.23;
+        padding-top: 10px;
+    }
+    
+    a[href*="tel"] {
+        color: $light-red;
+        font-size: rem-calc(20);
+        font-weight: 700;
+        line-height: 1.35;
+        margin: 0 15px;
+    }
+    
+    a:not( [href*="tel"] ) {
+        @include button();
+        @include button-background( $gold, scale-color($gold, -20% ) );
+        @include button-color( $white, $white );
+        padding: 6px 16px;
+    }
+    
+    
+    .before-header-widgets {
+        text-align: right;
+        > * {
+            display: inline-block; 
+            vertical-align: middle;  
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.related.products {
+  background: $light-gray;
+  text-align: center;
+
+  .header h2 {
+      color: #cd2533;
+      margin-top: 32px;
+      margin-bottom: 15px;
+
+      span {
+        font-size: 20px;
+        border-bottom: 3px solid #cd2533;
+        position: relative;
+        top: -7px;
+        padding: 0 2px;
+      }
+  }
+
+  .point.top {
+    padding-bottom: 30px;
+  }
+
+  .onsale {
+    display: block;
+  }
+}

@@ -1,0 +1,117 @@
+/* CSS Document */
+
+.template-contact {
+    
+    .section-hero {
+        
+        .wrap .row {
+            padding: 45px 0;
+        }
+        
+        &:after {
+            display: none;   
+        }
+    }
+    
+    section.default {
+       background: $light-gray;
+        margin-top: 0;
+        
+        .wrap {
+            max-width: 1000px;
+            margin: 0 auto;   
+        }
+        
+        @include breakpoint(large) {
+            
+            .column:last-child {
+                padding-left: rem-calc(map-get($grid-column-gutter, large)*3); 
+            }
+        }
+        
+        .gform_body {
+            margin-top: -20px!important;               
+        }
+        
+        @include breakpoint(medium down) {
+            .gform_footer {
+                text-align: center;   
+            }
+        }
+        
+        .entry-content {
+            
+            hr {
+                border-bottom: 5px solid $red; 
+            }
+         
+            h4:first-of-type {
+                margin-top: 30px;   
+            }
+            
+        }
+                
+    }
+    
+    
+	
+}
+
+
+
+.template-contact section.default {
+    
+    .be-social-widget {
+        
+        text-align: center;
+        
+        .widget-title {
+            font-size: 15px;
+            line-height: 18px;
+            color: $dark-gray;   
+        }
+    }
+    
+    .social-icons {
+        height: 42px;
+        text-align: center;
+          
+        li {
+           display: inline-block;
+           padding: 0 15px 0 0;   
+           height: 42px;
+          
+        }
+        
+        a {
+            transition: $transition;
+            width: 42px;
+            height: 42px;
+            display: block;
+            background-color: $red;
+            border-radius: 50%;
+            position: relative;
+            &:hover {
+                background-color: $light-red;
+                border-radius: 50%;
+                &:hover {
+                    svg {
+                        fill: $white;   
+                    }
+                }
+            }
+        }
+        
+        svg {
+            width: 36px;
+            height: 36px;
+            fill: $white;  
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);  
+        }
+    
+    }
+   
+}

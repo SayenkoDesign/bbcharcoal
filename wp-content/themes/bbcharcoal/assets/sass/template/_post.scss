@@ -1,0 +1,261 @@
+// Single Post
+
+.single-post {
+ 
+    .section-hero {
+        
+        background-color: $dark-gray;
+        
+        &:after {
+            display: block!important;   
+        }
+    }
+    
+    .section-hero {
+        
+        &.has-post-author .wrap .row {
+            padding-bottom: 75px; 
+
+        }
+        
+        h1 {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        
+        p {
+            color: #fff;  
+            font-size:20px;
+            line-height: 24px;               
+        }
+        
+        ul.post-categories {
+            @include list-reset;
+            display: inline-block;
+            letter-spacing: 1.8px;
+            border: 2px dotted $white;   
+            color: $white;
+            position: relative;
+            min-width: inherit;
+            padding-left: 30px;
+            padding-right: 30px;
+            margin-bottom: $global-margin;
+            margin-left: 40px;
+            margin-right: 40px;
+           
+        
+            &:before {
+                content: '';
+                width: 24px;
+                height: 0;
+                border: 1px dashed $white; 
+                position: absolute;
+                top: 50%;
+                left: -26px;
+                margin-top: -1px;
+                   
+            }
+            
+            &:after {
+                content: '';
+                width: 24px;
+                height: 0;
+                border: 1px dashed $white; 
+                position: absolute;
+                top: 50%;
+                right: -26px;
+                margin-top: -1px;
+                   
+            }  
+            
+            li {
+                display: inline-block;
+                padding: 5px;
+                
+                a {
+                    color: $white;
+                    
+                    &:hover {
+                        color: $gold;   
+                    }
+                }
+            }
+        }
+        
+        .posted-on {
+            color: #EFF3F1;
+            font-size: 20px;
+            line-height: 25px;   
+            font-family: $header-font-family;
+        }
+        
+    }
+                
+    article {
+        
+        padding: 75px 0 0 0;
+        position: relative;
+        
+        .post-author {
+            position: relative;
+            width: 100%;
+            margin: -135px auto 25px;
+            z-index: 3;
+            text-align: center;
+            
+            a {
+                display: inline-block;   
+            }
+            
+            img {
+                border-radius: 50%;
+                border: 2px solid #fff;  
+                box-shadow: 0 0 5px 2px rgba(40,36,37,0.5);
+                margin-bottom: 15px;
+            }
+        }
+        
+        .intro {
+            p {
+                font-size: 18px;
+                line-height: 32px;
+                color: $dark-gray;  
+                margin-bottom: $global-margin; 
+                font-family: $header-font-family;
+                text-transform: uppercase;
+                
+                &:first-child:first-letter {
+                    font-size: 56px;
+                    line-height: 42px; 
+                    float: left;
+                    padding-top: 8px;
+                    padding-right: 8px;
+                    padding-left: 3px;  
+                } 
+                
+                @include breakpoint(large) {
+                    font-size: 24px;
+                    
+                    &:first-child:first-letter {
+                        font-size: 72px;   
+                    }
+                }
+            }
+        }
+        
+        .entry-content {
+            
+            img {
+                
+                box-shadow: 0 0 13px 2px rgba(40,36,37,0.5);
+                
+                @include breakpoint(xxlarge) {
+                    &.alignleft {
+                        margin-left: -20%;
+                    }
+                    
+                    &.alignright {
+                        margin-right: -20%;
+                    }
+                }
+            }
+        }
+        
+        
+    }
+    
+    
+    
+    .entry-footer {
+        display: none;
+    }
+   
+    
+    .section-post-footer {
+        .wrap {
+            background-color: $light-gray;   
+        }
+        
+        .point img {
+            width: 100%;
+        }
+        
+        h3 {
+            color: $dark-gray;   
+        }
+    }
+    
+    .section-post-footer .column {
+        position: relative;   
+    }
+    
+    .nav-links {
+        @extend .clear;
+        z-index: 9;
+        
+        > div {
+            display: inline-block;
+            padding: 10px 50px;
+            
+         }
+     
+        a {
+            padding: 0;   
+            width: 33px;
+            height: 33px;
+            border-radius: 50%;
+            border: 2px dotted $red;
+            display: block;
+            
+            @include breakpoint(large) {
+                width: 66px;
+                height: 66px;
+            }
+        }
+        
+        
+        svg {
+            width: 15.5px;
+            height: 11px;   
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            
+            @include breakpoint(large) {
+                width: 31px;
+                height: 22px;   
+            }
+        }
+        
+        .nav-next a {
+            
+            position: relative;
+            
+            @include breakpoint(large) {
+                right: rem-calc(map-get($grid-column-gutter, large)/2); 
+                
+                position: absolute; 
+                top: 50%;
+                //right: rem-calc(map-get($grid-column-gutter, small)/2); 
+                transform: translateY(-50%);  
+            }
+        }
+        
+        .nav-previous a {
+            
+            position: relative;
+            
+            @include breakpoint(large) {
+                left: rem-calc(map-get($grid-column-gutter, large)/2); 
+                
+                position: absolute; 
+                top: 50%;
+                //left: rem-calc(map-get($grid-column-gutter, small)/2); 
+                transform: translateY(-50%);
+            }  
+        }
+        
+    }
+    
+}
