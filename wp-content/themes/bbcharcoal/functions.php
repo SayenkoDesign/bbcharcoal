@@ -261,8 +261,6 @@ function ud_update_woo_flexslider_options( $options ) {
 
     $options['directionNav'] = true;
 		$options['controlNav'] = false;
-		prevText: "Previous",  
-		nextText: "Next",
 
     return $options;
 }
