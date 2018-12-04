@@ -30,9 +30,7 @@ if ( $total <= 1 ) {
 ?>
 <div class="pagination-full-width-wrapper">
 	<nav class="woocommerce-pagination">
-		<!-- <div class="point"><img src="/wp-content/themes/bbcharcoal/assets/images/page/tear-bottom-alt.png" class="" /></div> -->
 		<?php echo do_shortcode('[facetwp load_more="true" label="Load more" class="button dashed"]'); ?>
-		<!-- <div class="point"><img src="/wp-content/themes/bbcharcoal/assets/images/page/tear-top-alt.png" class="" /></div> -->
 	</nav>
 </div>
 <div class="point"><img src="/wp-content/themes/bbcharcoal/assets/images/page/tan-curve-top.png" class="" /></div>
