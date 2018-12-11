@@ -216,6 +216,11 @@ function wc_lower_custom_fields() {
 				<div class="content-wrapper large-4 small-10 columns">
 					<h2><?=$content_group['row_1_title']?></h2>
 					<p><?=$content_group['row_1_content']?></p>
+					<?php if ($content_group['button']['page']) : ?>
+						<a href="<?=$content_group['button']['page']?>" class="red button"><?=$content_group['button']['text']?></a>
+					<?php elseif ($content_group['button']['url']) :?>
+						<a href="<?=$content_group['button']['url']?>" class="red button"><?=$content_group['button']['text']?></a>
+					<?php endif; ?>
 				</div>
 			</div>
 		</div>
@@ -263,3 +268,31 @@ function ud_update_woo_flexslider_options( $options ) {
 
     return $options;
 }
+
+// define the woocommerce_cart_item_quantity callback
+function filter_woocommerce_cart_item_quantity( $product_quantity, $cart_item_key ) {
+    // make filter magic happen here...
+    return '<span class="minus-product">-</span>' . $product_quantity . '<span class="plus-product">+</span>';
+};
+
+// add the filter
+add_filter( 'woocommerce_cart_item_quantity', 'filter_woocommerce_cart_item_quantity', 10, 2 );
+
+// Checkout placeholder text
+// add_filter('woocommerce_default_address_fields', 'override_default_address_fields' );
+// function override_default_address_fields( $address_fields ) {
+//     $address_fields['first_name']['placeholder'] = 'First';
+// 		$address_fields['last_name']['placeholder'] = 'Last';
+//     $address_fields['company']['placeholder'] = 'Company';
+//     $address_fields['address_1']['placeholder'] = 'Address';
+//     $address_fields['state']['placeholder'] = 'State';
+//     $address_fields['postcode']['placeholder'] = 'Zip Code';
+// 		$address_fields['city']['placeholder'] = 'City';
+//     return $address_fields;
+// }
+//
+// add_filter( 'woocommerce_checkout_fields', 'override_default_checkout_fields' );
+// function override_default_checkout_fields( $address_fields ) {
+// 	$address_fields['billing']['billing_phone']['placeholder'] = 'Phone (Optional)';
+// 	return $address_fields;
+// }

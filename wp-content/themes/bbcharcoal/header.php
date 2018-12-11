@@ -96,7 +96,7 @@
                 <!-- </div> -->
                 <?php
                 global $woocommerce;
-                $cart_url = $woocommerce->cart->get_cart_url();
+                $cart_url = wc_get_cart_url();
                 ?>
                 <a href="<?php echo $cart_url; ?>" class="header-cart"><span><?php echo $woocommerce->cart->get_cart_contents_count(); ?></span><img src="/wp-content/themes/bbcharcoal/assets/images/header/shopping-cart.svg" alt="Cart"></a>
 

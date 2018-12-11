@@ -95,22 +95,27 @@
       .product_meta {
         display: inline-block;
         position: relative;
-        padding-right: 65px;
         margin-bottom: 5px;
 
         .sku_wrapper {
-          display: none;  
+          display: none;
         }
 
-        &:after {
-          content: "";
-          width: 58px;
-          height: 2px;
-          background-color: #e0c68a;
-          position: absolute;
-          top: 50%;
-          right: 0;
-          margin-top: -5px;
+        .styled-cat {
+          position: relative;
+          padding-right: 65px;
+          display: block;
+
+          &:after {
+            content: "";
+            width: 58px;
+            height: 2px;
+            background-color: #e0c68a;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            margin-top: -5px;
+          }
         }
 
         .posted_in {
@@ -133,6 +138,18 @@
 
           a {
             color: $gold;
+          }
+        }
+        .tagged_as {
+          color: $red;
+          font-family: $header-font-family;
+
+          a {
+              color: $red;
+
+              &:hover {
+                color: $light-red;
+              }
           }
         }
       }
@@ -322,6 +339,10 @@
 
       .content-wrapper {
         margin-top: 30px;
+
+        .button {
+          margin-top: 23px;
+        }
       }
     }
 
