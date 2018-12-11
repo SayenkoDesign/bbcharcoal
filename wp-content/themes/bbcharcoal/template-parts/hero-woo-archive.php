@@ -44,13 +44,16 @@ if( ! class_exists( 'Hero_Section' ) ) {
         public function render() {
 
             $fields = $this->get_fields();
-
-            $heading        = $this->get_fields( 'heading', 'option' ) ? $this->get_fields( 'heading', 'option' ) : get_the_title();
-            $heading        = _s_format_string( $heading, 'h1' );
-            $subheading     = '';
-            if( !empty( $this->get_fields( 'subheading' ) ) ) {
-                $subheading = _s_format_string( sprintf( '<span>%s</span>', _s_wrap_string( $this->get_fields( 'subheading' ) ) ), 'h3' );
+            if( is_shop() ) {
+              $heading = $this->get_fields( 'heading', 'option' ) ? $this->get_fields( 'heading', 'option' ) : get_the_title();
+              if( !empty( $this->get_fields( 'subheading' ) ) ) {
+                  $subheading = _s_format_string( sprintf( '<span>%s</span>', _s_wrap_string( $this->get_fields( 'subheading' ) ) ), 'h3' );
+              }
+            } else {
+              $heading = single_cat_title("", false);
+              $subheading    = '';
             }
+            $heading        = _s_format_string( $heading, 'h1' );
 
             $description    = _s_format_string( $this->get_fields( 'description' ), 'p' );
 
@@ -79,11 +82,6 @@ if( ! class_exists( 'Hero_Section' ) ) {
             $button = $button->get_element();
 
             $since = $point = '';
-
-            if( is_front_page() ) {
-                $since = sprintf( '<h5 class="since">%s</h5>', 'since 1961' );
-                $point = sprintf('<div class="point"><img src="%shome/pointed-up-background-tan.png" class="" /></div>', trailingslashit( THEME_IMG ) );
-            }
             return sprintf( '<div class="row align-middle"><div class="column"><div class="caption">%s%s%s%s%s</div></div></div>%s', $since, $heading, $subheading, $description, $button, $point );
         }
     }

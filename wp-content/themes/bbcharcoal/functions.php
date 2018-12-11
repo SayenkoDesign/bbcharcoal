@@ -181,7 +181,7 @@ add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
 function new_loop_shop_per_page( $cols ) {
   // $cols contains the current number of products per page based on the value stored on Options -> Reading
   // Return the number of products you wanna show per page.
-  $cols = 3;
+  $cols = 9;
   return $cols;
 }
 
@@ -207,41 +207,46 @@ function wc_lower_custom_fields() {
 	echo '<div class="lower-product-content">';
 	if( get_field('content_row_1', $page_id)) :
 		$content_group = get_field('content_row_1', $page_id);
-		?>
-		<div class="lower-content-row row-one">
-			<div class="row">
-				<div class="image-wrapper large-6 small-10 columns">
-					<?php echo wp_get_attachment_image( $content_group['row_1_image'], 'full' ); ?>
-				</div>
-				<div class="content-wrapper large-4 small-10 columns">
-					<h2><?=$content_group['row_1_title']?></h2>
-					<p><?=$content_group['row_1_content']?></p>
-					<?php if ($content_group['button']['page']) : ?>
-						<a href="<?=$content_group['button']['page']?>" class="red button"><?=$content_group['button']['text']?></a>
-					<?php elseif ($content_group['button']['url']) :?>
-						<a href="<?=$content_group['button']['url']?>" class="red button"><?=$content_group['button']['text']?></a>
-					<?php endif; ?>
+
+		if( $content_group['row_1_content'] ) :
+			?>
+			<div class="lower-content-row row-one">
+				<div class="row">
+					<div class="image-wrapper large-6 small-10 columns">
+						<?php echo wp_get_attachment_image( $content_group['row_1_image'], 'full' ); ?>
+					</div>
+					<div class="content-wrapper large-4 small-10 columns">
+						<h2><?=$content_group['row_1_title']?></h2>
+						<p><?=$content_group['row_1_content']?></p>
+						<?php if ($content_group['button']['page']) : ?>
+							<a href="<?=$content_group['button']['page']?>" class="red button"><?=$content_group['button']['text']?></a>
+						<?php elseif ($content_group['button']['url']) :?>
+							<a href="<?=$content_group['button']['url']?>" class="red button"><?=$content_group['button']['text']?></a>
+						<?php endif; ?>
+					</div>
 				</div>
 			</div>
-		</div>
-	<?php
+		<?php
+		endif;
 	endif;
 
 	if( get_field('content_row_2', $page_id)) :
 		$content_group = get_field('content_row_2', $page_id);
-		?>
-		<div class="lower-content-row row-two">
-			<div class="row">
-				<div class="content-wrapper large-4 small-10 large-offset-2 columns">
-					<h2><?=$content_group['row_2_title']?></h2>
-					<p><?=$content_group['row_2_content']?></p>
-				</div>
-				<div class="image-wrapper large-6 small-10 columns">
-					<?php echo wp_get_attachment_image( $content_group['row_2_image'], 'full' ); ?>
+		if( $content_group['row_2_content'] ) :
+			?>
+			<div class="lower-content-row row-two">
+				<div class="row">
+					<div class="content-wrapper large-4 small-10 large-offset-2 columns">
+						<h2><?=$content_group['row_2_title']?></h2>
+						<p><?=$content_group['row_2_content']?></p>
+					</div>
+					<div class="image-wrapper large-6 small-10 columns">
+						<?php echo wp_get_attachment_image( $content_group['row_2_image'], 'full' ); ?>
+					</div>
 				</div>
 			</div>
-		</div>
-	<?php
+		<?php
+		endif;
 	endif;
 	echo '</div>';
 }
@@ -279,20 +284,20 @@ function filter_woocommerce_cart_item_quantity( $product_quantity, $cart_item_ke
 add_filter( 'woocommerce_cart_item_quantity', 'filter_woocommerce_cart_item_quantity', 10, 2 );
 
 // Checkout placeholder text
-// add_filter('woocommerce_default_address_fields', 'override_default_address_fields' );
-// function override_default_address_fields( $address_fields ) {
-//     $address_fields['first_name']['placeholder'] = 'First';
-// 		$address_fields['last_name']['placeholder'] = 'Last';
-//     $address_fields['company']['placeholder'] = 'Company';
-//     $address_fields['address_1']['placeholder'] = 'Address';
-//     $address_fields['state']['placeholder'] = 'State';
-//     $address_fields['postcode']['placeholder'] = 'Zip Code';
-// 		$address_fields['city']['placeholder'] = 'City';
-//     return $address_fields;
-// }
-//
-// add_filter( 'woocommerce_checkout_fields', 'override_default_checkout_fields' );
-// function override_default_checkout_fields( $address_fields ) {
-// 	$address_fields['billing']['billing_phone']['placeholder'] = 'Phone (Optional)';
-// 	return $address_fields;
-// }
+add_filter('woocommerce_default_address_fields', 'override_default_address_fields' );
+function override_default_address_fields( $address_fields ) {
+    $address_fields['first_name']['placeholder'] = 'First';
+		$address_fields['last_name']['placeholder'] = 'Last';
+    $address_fields['company']['placeholder'] = 'Company';
+    $address_fields['address_1']['placeholder'] = 'Address';
+    $address_fields['state']['placeholder'] = 'State';
+    $address_fields['postcode']['placeholder'] = 'Zip Code';
+		$address_fields['city']['placeholder'] = 'City';
+    return $address_fields;
+}
+
+add_filter( 'woocommerce_checkout_fields', 'override_default_checkout_fields' );
+function override_default_checkout_fields( $address_fields ) {
+	$address_fields['billing']['billing_phone']['placeholder'] = 'Phone (Optional)';
+	return $address_fields;
+}

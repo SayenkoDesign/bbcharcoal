@@ -19,6 +19,10 @@ defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
 
+if( is_shop() ) {
+	get_template_part( 'template-parts/hero-woo-archive' );
+}
+
 /**
  * Hook: woocommerce_before_main_content.
  *
@@ -27,22 +31,31 @@ get_header( 'shop' );
  * @hooked WC_Structured_Data::generate_website_data() - 30
  */
 
-get_template_part( 'template-parts/hero-woo-archive' );
 do_action( 'woocommerce_before_main_content' );
 
+if( is_product_category() ) :
 ?>
+
 <header class="woocommerce-products-header">
-	<?php
-	/**
-	 * Hook: woocommerce_archive_description.
-	 *
-	 * @hooked woocommerce_taxonomy_archive_description - 10
-	 * @hooked woocommerce_product_archive_description - 10
-	 */
-	do_action( 'woocommerce_archive_description' );
-	?>
+	<div class="row column">
+		<div class="large-5 small-12 cat-intro">
+			<div class="element-html"><img src="/wp-content/themes/bbcharcoal/assets/images/icons/bbq.svg" class=""></div>
+			<h1><?php single_cat_title() ?></h1>
+			<?php
+			/**
+			 * Hook: woocommerce_archive_description.
+			 *
+			 * @hooked woocommerce_taxonomy_archive_description - 10
+			 * @hooked woocommerce_product_archive_description - 10
+			 */
+			do_action( 'woocommerce_archive_description' );
+			?>
+		</div>
+	</div>
 </header>
+
 <?php
+endif;
 if ( woocommerce_product_loop() ) {
 
 	/**
@@ -82,7 +95,7 @@ if ( woocommerce_product_loop() ) {
 	 * @hooked woocommerce_pagination - 10
 	 */
 	do_action( 'woocommerce_after_shop_loop' );
-	
+
 } else {
 	/**
 	 * Hook: woocommerce_no_products_found.
