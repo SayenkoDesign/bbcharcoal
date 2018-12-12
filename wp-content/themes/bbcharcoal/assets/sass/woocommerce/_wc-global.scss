@@ -257,8 +257,24 @@
   .point img {
     width: 100%;
   }
-}
 
-.post-type-archive-product {
+  p.cart-empty {
+    text-align: center;
+    width: 100%;
+  }
 
+  p.return-to-shop {
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    .button {
+      background: $red;
+      color: $white;
+
+      &:hover {
+        background: $light-red;
+      }
+    }
+  }
 }

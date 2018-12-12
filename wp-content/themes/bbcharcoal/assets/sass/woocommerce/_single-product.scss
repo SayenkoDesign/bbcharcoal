@@ -45,6 +45,10 @@
       margin-bottom: 15px;
       text-align: center;
 
+      .flex-viewport {
+        box-shadow: 0 0 13px 2px rgba(40,36,37,.5);
+      }
+
       .flex-direction-nav {
         height: 40px;
         margin-top: 15px;
@@ -297,8 +301,6 @@
     margin-top: 45px;
 
     .lower-content-row {
-      margin-bottom: 45px;
-
       .row{
         padding: 45px 0;
       }
@@ -337,6 +339,10 @@
         }
       }
 
+      .image-wrapper img {
+        box-shadow: 0 0 13px 2px rgba(40,36,37,.5);
+      }
+
       .content-wrapper {
         margin-top: 30px;
 
@@ -362,17 +368,8 @@
           }
         }
 
-        .row{
-          padding: 45px 0 0 0;
-        }
-
         .content-wrapper {
           margin-top: 0;
-        }
-
-        .image-wrapper {
-          padding-left: 45px;
-          margin-bottom: -45px;
         }
       }
     }

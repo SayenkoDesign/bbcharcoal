@@ -216,7 +216,7 @@ function wc_lower_custom_fields() {
 						<?php echo wp_get_attachment_image( $content_group['row_1_image'], 'full' ); ?>
 					</div>
 					<div class="content-wrapper large-4 small-10 columns">
-						<h2><?=$content_group['row_1_title']?></h2>
+						<h3><?=$content_group['row_1_title']?></h3>
 						<p><?=$content_group['row_1_content']?></p>
 						<?php if ($content_group['button']['page']) : ?>
 							<a href="<?=$content_group['button']['page']?>" class="red button"><?=$content_group['button']['text']?></a>
@@ -237,8 +237,13 @@ function wc_lower_custom_fields() {
 			<div class="lower-content-row row-two">
 				<div class="row">
 					<div class="content-wrapper large-4 small-10 large-offset-2 columns">
-						<h2><?=$content_group['row_2_title']?></h2>
+						<h3><?=$content_group['row_2_title']?></h3>
 						<p><?=$content_group['row_2_content']?></p>
+						<?php if ($content_group['button']['page']) : ?>
+							<a href="<?=$content_group['button']['page']?>" class="red button"><?=$content_group['button']['text']?></a>
+						<?php elseif ($content_group['button']['url']) :?>
+							<a href="<?=$content_group['button']['url']?>" class="red button"><?=$content_group['button']['text']?></a>
+						<?php endif; ?>
 					</div>
 					<div class="image-wrapper large-6 small-10 columns">
 						<?php echo wp_get_attachment_image( $content_group['row_2_image'], 'full' ); ?>
