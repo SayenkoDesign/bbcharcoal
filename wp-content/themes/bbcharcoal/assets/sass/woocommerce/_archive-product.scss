@@ -1,3 +1,7 @@
 .post-type-archive-product {
-
+  .section-hero{
+    &:after {
+      display: none;
+    }
+  }
 }

@@ -1,57 +1,88 @@
 .woocommerce {
+  .section-hero {
+    .align-middle.row {
+      padding: 75px 0 25px;
+    }
 
-  .caption {
-    h3 {
-      color: $gold;
-      display: inline-block;
-      position: relative;
-      padding: 0 62px;
+    .caption {
+      h3 {
+        color: $gold;
+        display: inline-block;
+        position: relative;
+        padding: 0 62px;
 
-      &:before {
-        content: '';
-        width: 58px;
-        height: 2px;
-        background-color: $gold;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        margin-top: -5px;
-      }
-
-      &:after {
-        content: '';
-        width: 58px;
-        height: 2px;
-        background-color: $gold;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        margin-top: -5px;
-      }
-
-      span {
         &:before {
           content: '';
-          width: 38px;
+          width: 58px;
           height: 2px;
-          background-color: $green;
+          background-color: $gold;
           position: absolute;
           top: 50%;
-          left: 20px;
-          margin-top: 2px;
+          left: 0;
+          margin-top: -5px;
         }
 
         &:after {
           content: '';
-          width: 38px;
+          width: 58px;
           height: 2px;
-          background-color: $green;
+          background-color: $gold;
           position: absolute;
           top: 50%;
-          right: 20px;
-          margin-top: 2px;
+          right: 0;
+          margin-top: -5px;
+        }
+
+        span {
+          &:before {
+            content: '';
+            width: 38px;
+            height: 2px;
+            background-color: $green;
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            margin-top: 2px;
+          }
+
+          &:after {
+            content: '';
+            width: 38px;
+            height: 2px;
+            background-color: $green;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            margin-top: 2px;
+          }
         }
       }
+
+      .button.dashed {
+        margin-top: 20px;
+        color: $white;
+        border-color: $white;
+
+        &:hover {
+          background: $white;
+          color: $red;
+        }
+
+        &:before,
+        &:after {
+          border-color: $white;
+        }
+      }
+    }
+  }
+
+  .woocommerce-notices-wrapper {
+    .woocommerce-error {
+      padding: 25px 0;
+      margin: 25px 0;
+      text-align: left;
+      background: $red;
+      color: $white;
     }
   }
 
@@ -86,7 +117,7 @@
   li.product {
     list-style: none;
     text-align: center;
-    padding: 0 10px 15px;
+    padding: 0 10px 20px;
 
     .wrapper-wrap-inner {
       margin: auto;
@@ -96,6 +127,49 @@
       max-width: 300px;
       margin: auto;
       padding-bottom: 100px;
+    }
+
+    &.product-category {
+      position: relative;
+
+      .fliter-bg {
+        width: calc(100% - 20px);
+        height: calc(100% - 20px);
+        max-width: 500px;
+        position: absolute;
+        background: rgba(128, 128, 128, 0.5);
+        box-shadow: 0 0 13px 2px rgba(40,36,37,.5);
+      }
+
+      &:hover .fliter-bg {
+        background: rgba(205,37,51,.8);
+      }
+
+      .woocommerce-loop-category__title {
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        width: 100%;
+        transform: translate(0, -50%);
+        color: $white;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        flex: 0 0 100%;
+        max-width: 100%;
+
+        @include breakpoint(large) {
+          flex: 0 0 50%;
+          max-width: 50%;
+        }
+      }
+    }
+
+    .woocommerce-loop-category__title {
+      .count {
+        display: none;
+      }
     }
 
     span.price {

@@ -82,7 +82,7 @@ if( ! class_exists( 'Hero_Section' ) ) {
             $button = $button->get_element();
 
             $since = $point = '';
-            return sprintf( '<div class="row align-middle"><div class="column"><div class="caption">%s%s%s%s%s</div></div></div>%s', $since, $heading, $subheading, $description, $button, $point );
+            return sprintf( '<div class="row align-middle"><div class="column"><div class="caption">%s%s%s%s%s<div class="element-button entry-content"><p><a class="dashed button" href="/store-locator/"><span>Find A Store</span></a></p></div></div></div></div><div class="point"><img src="/wp-content/themes/bbcharcoal/assets/images/home/pointed-up-background-tan.png" class=""></div>%s', $since, $heading, $subheading, $description, $button, $point );
         }
     }
 }
