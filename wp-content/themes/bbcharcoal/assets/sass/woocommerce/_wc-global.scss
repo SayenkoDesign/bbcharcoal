@@ -117,7 +117,11 @@
   li.product {
     list-style: none;
     text-align: center;
-    padding: 0 10px 20px;
+    padding: 0 0 20px;
+
+    @include breakpoint(large) {
+      padding: 0 10px 20px;
+    }
 
     .wrapper-wrap-inner {
       margin: auto;
@@ -133,12 +137,16 @@
       position: relative;
 
       .fliter-bg {
-        width: calc(100% - 20px);
+        width: 100%;
         height: calc(100% - 20px);
         max-width: 500px;
         position: absolute;
         background: rgba(128, 128, 128, 0.5);
         box-shadow: 0 0 13px 2px rgba(40,36,37,.5);
+
+        @include breakpoint(large) {
+          width: calc(100% - 20px);
+        }
       }
 
       &:hover .fliter-bg {

@@ -248,6 +248,7 @@
         margin-top: 14px;
         width: 100%;
         font-family: 'Oswald', sans-serif;
+        max-width: 280px;
 
         img {
           margin-right: 15px;
@@ -256,13 +257,23 @@
         &:hover {
           background: $light-red;
         }
+
+        @include breakpoint(xlarge) {
+          max-width: 100%;
+        }
       }
 
       .share-icons {
         text-align: center;
+        display: flex;
+        max-width: 280px;
 
-        @include breakpoint(large) {
-          text-align: left;
+        @include breakpoint(xlarge) {
+          max-width: 100%;
+        }
+        
+        li {
+          margin: auto;
         }
       }
     }
