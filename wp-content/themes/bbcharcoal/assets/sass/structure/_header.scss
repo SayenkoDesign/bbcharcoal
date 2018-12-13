@@ -82,8 +82,11 @@ Header
 
             display: inline-block;
 
-            padding: 5px 20px;
+            padding: 0 5px 5px;
 
+            img {
+              height: 65px;
+            }
 
             @include breakpoint(medium) {
                 padding-left: rem-calc(map-get($grid-column-gutter, medium) /2 );
@@ -95,6 +98,10 @@ Header
                 top: 0;
                 left: rem-calc(map-get($grid-column-gutter, medium) /2 );
                 transform: translateY(-50%);
+
+                img {
+                  height: auto;
+                }
             }
 
             @include breakpoint(xxxlarge) {
@@ -169,7 +176,7 @@ Header
 
     .menu-toggle {
         position: absolute;
-        top: 33px;
+        top: 20px;
         right: rem-calc(map-get($grid-column-gutter, small) /2 );
         z-index: 999;
 
@@ -283,8 +290,8 @@ Header
     background: $red;
     display: block;
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     left: 0;
     right: auto;
     top: 0;

@@ -221,7 +221,7 @@ function wc_lower_custom_fields() {
 						<?php if ($content_group['button']['page']) : ?>
 							<a href="<?=$content_group['button']['page']?>" class="red button"><?=$content_group['button']['text']?></a>
 						<?php elseif ($content_group['button']['url']) :?>
-							<a href="<?=$content_group['button']['url']?>" class="red button"><?=$content_group['button']['text']?></a>
+							<a href="<?=$content_group['button']['url']?>" class="red button" target="_blank"><?=$content_group['button']['text']?></a>
 						<?php endif; ?>
 					</div>
 				</div>
@@ -242,7 +242,7 @@ function wc_lower_custom_fields() {
 						<?php if ($content_group['button']['page']) : ?>
 							<a href="<?=$content_group['button']['page']?>" class="red button"><?=$content_group['button']['text']?></a>
 						<?php elseif ($content_group['button']['url']) :?>
-							<a href="<?=$content_group['button']['url']?>" class="red button"><?=$content_group['button']['text']?></a>
+							<a href="<?=$content_group['button']['url']?> " class="red button" target="_blank"><?=$content_group['button']['text']?></a>
 						<?php endif; ?>
 					</div>
 					<div class="image-wrapper large-6 small-10 columns">
