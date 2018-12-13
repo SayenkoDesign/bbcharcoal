@@ -33,7 +33,7 @@ if( is_shop() ) {
 
 do_action( 'woocommerce_before_main_content' );
 
-if( is_product_category() ) :
+if( is_product_category() || is_product_tag() ) :
 ?>
 
 <header class="woocommerce-products-header">
@@ -68,7 +68,7 @@ if ( woocommerce_product_loop() ) {
 	do_action( 'woocommerce_before_shop_loop' );
 
 	// get_template_part( 'template-parts/filter-woo' );
-	if( is_product_category() ) :
+	if( is_product_category() || is_product_tag() ) :
 		echo '<div class="point"><img src="/wp-content/themes/bbcharcoal/assets/images/page/tan-curve-bottom.png" class="" /></div>';
 	endif;
 
