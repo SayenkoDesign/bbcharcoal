@@ -1,4 +1,9 @@
 .woocommerce-checkout {
+
+  .section-her0:after {
+    display: none;  
+  }
+
   .hero-background.section-hero:after {
     background-image: url(assets/images/tear-bottom-alt.png);
   }
@@ -62,7 +67,7 @@
       text-align: left;
       width: 100%;
 
-      th {
+      tr {
         border: none;
       }
 
