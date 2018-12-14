@@ -233,12 +233,15 @@
 
       .variations {
         width: 100%;
-
-        label {
+        .label {
           vertical-align: top;
-          text-transform: uppercase;
-          font-weight: bold;
-          color: #d3283a;
+
+          label {
+            vertical-align: top;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #d3283a;
+          }
         }
 
         .reset_variations {
