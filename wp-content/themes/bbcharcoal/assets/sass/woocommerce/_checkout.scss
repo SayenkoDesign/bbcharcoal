@@ -1,7 +1,7 @@
 .woocommerce-checkout {
 
-  .section-her0:after {
-    display: none;  
+  .section-hero:after {
+    display: none;
   }
 
   .hero-background.section-hero:after {
@@ -28,8 +28,12 @@
       background-color: #fff;
     }
 
-    label {
-      display: none;
+    .label {
+      vertical-align: top;
+
+      label {
+        display: none;
+      }
     }
 
     .form-row-wide {
