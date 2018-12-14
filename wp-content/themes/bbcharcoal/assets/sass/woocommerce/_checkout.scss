@@ -33,8 +33,12 @@
     }
 
     .form-row-first, .form-row-last {
-        flex: 0 0 50%;
+        flex: 0 0 100%;
         padding: 0  10px;
+
+        @include breakpoint(medium) {
+          flex: 0 0 50%;
+        }
     }
   }
 
@@ -61,11 +65,13 @@
       .woocommerce-shipping-totals {
         th {
           display: block;
+          border: none;
         }
 
         td {
           display: block;
           margin-left: 10px;
+          border: none;
 
           input {
             margin-right: 8px;
