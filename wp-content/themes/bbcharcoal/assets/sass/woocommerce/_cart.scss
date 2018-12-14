@@ -128,12 +128,29 @@
     .cart-collaterals {
       flex: 0 0 100%;
 
+
       .cart_totals {
         background: #f3f1ee;
         padding: 30px;
 
         .shop_table_responsive {
           text-align: left;
+
+          .woocommerce-shipping-totals {
+            th {
+              display: block;
+            }
+
+            .shipping {
+              display: block;
+
+              li {
+                input {
+                  margin-right: 8px;
+                }
+              }
+            }
+          }
 
           td {
             padding: 15px;
