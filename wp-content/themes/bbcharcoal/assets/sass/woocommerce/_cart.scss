@@ -119,15 +119,15 @@
       }
 
       @include breakpoint(medium) {
-        flex: 0 0 60%;
+        flex: 0 0 100%;
         margin: 0 auto;
       }
 
     }
 
     .cart-collaterals {
-      flex: 0 0 100%;
-
+      flex: 0 0 60%;
+      margin: auto;
 
       .cart_totals {
         background: #f3f1ee;
@@ -140,14 +140,27 @@
             padding: 15px 0;
 
             .coupon {
+
               label {
-                font-weight: bold;
-                display: block;
-                margin-bottom: 5px;
+                display: none;
+              }
+
+              input {
+                width: 100%;
+                padding: 8px;
+                color: #4a4a4a;
+                outline: none;
+                border: 1px solid #979797;
+                background-color: #fff;
               }
 
               .button {
                 margin-top: 10px;
+                width: 100%;
+
+                @include breakpoint(xlarge) {
+                  width: auto;
+                }
               }
             }
           }
@@ -167,14 +180,24 @@
             }
           }
 
-          td {
-            padding: 15px;
+          tr {
+            border: none;
+          }
 
-            &[data-title='Subtotal'],
-            &[data-title='Tax'],
-            &[data-title='order-total'] {
-              text-align: right;
-            }
+          th {
+            display: block;
+          }
+
+          td {
+            border: none;
+            padding: 15px;
+            display: block;
+
+            // &[data-title='Subtotal'],
+            // &[data-title='Tax'],
+            // &[data-title='order-total'] {
+            //   text-align: left;
+            // }
           }
         }
 
@@ -186,6 +209,11 @@
             background-color: $light-red;
           }
         }
+      }
+
+      @include breakpoint(medium) {
+        flex: 0 0 100%;
+        margin: 0 auto;
       }
 
       @include breakpoint(xlarge) {
