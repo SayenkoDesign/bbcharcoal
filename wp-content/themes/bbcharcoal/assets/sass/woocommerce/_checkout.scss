@@ -9,7 +9,8 @@
     padding-top: 45px;
   }
 
-  .woocommerce-billing-fields__field-wrapper {
+  .woocommerce-billing-fields__field-wrapper,
+  .woocommerce-shipping-fields__field-wrapper {
     display: flex;
     flex-wrap: wrap;
 
@@ -48,7 +49,7 @@
   }
   .woocommerce-checkout-review-order {
     padding-bottom: 30px;
-    
+
     .woocommerce-checkout-review-order-table {
       text-align: left;
     }
