@@ -136,6 +136,21 @@
         .shop_table_responsive {
           text-align: left;
 
+          .coupon-code {
+            padding: 15px 0;
+
+            .coupon {
+              label {
+                font-weight: bold;
+                display: block;
+                margin-bottom: 5px;
+              }
+
+              .button {
+                margin-top: 10px;
+              }
+            }
+          }
           .woocommerce-shipping-totals {
             th {
               display: block;
