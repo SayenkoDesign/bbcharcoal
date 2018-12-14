@@ -62,16 +62,22 @@
       text-align: left;
       width: 100%;
 
+      th {
+        border: none;
+      }
+
+      td {
+        border: none;
+      }
+
       .woocommerce-shipping-totals {
         th {
           display: block;
-          border: none;
         }
 
         td {
           display: block;
           margin-left: 10px;
-          border: none;
 
           input {
             margin-right: 8px;
