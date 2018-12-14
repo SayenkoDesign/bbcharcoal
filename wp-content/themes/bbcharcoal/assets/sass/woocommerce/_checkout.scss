@@ -43,6 +43,10 @@
       display: none;
     }
 
+    .form-row.notes {
+      padding: 0 10px;
+    }
+
     textarea {
       width: 100%;
     }
@@ -52,6 +56,22 @@
 
     .woocommerce-checkout-review-order-table {
       text-align: left;
+      width: 100%;
+
+      .woocommerce-shipping-totals {
+        th {
+          display: block;
+        }
+
+        .shipping {
+          display: block;
+          margin-left: 10px;
+
+          input {
+            margin-right: 8px;
+          }
+        }
+      }
     }
   }
 
