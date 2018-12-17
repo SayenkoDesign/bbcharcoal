@@ -92,6 +92,29 @@
     }
   }
 
+  .woocommerce-checkout-payment {
+    li.wc_payment_method {
+      padding-left: 12px;
+
+      input {
+        margin-right: 6px;
+      }
+    }
+
+    fieldset {
+      border: none;
+
+      input {
+        width: 100%;
+        padding: 8px;
+        color: #4a4a4a;
+        outline: none;
+        border: 1px solid #979797;
+        background-color: #fff;
+      }
+    }
+  }
+
   .button#place_order {
     background: $red;
 
