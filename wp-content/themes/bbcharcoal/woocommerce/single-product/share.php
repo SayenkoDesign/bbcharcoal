@@ -22,6 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 do_action( 'woocommerce_share' ); // Sharing plugins can hook into here.
-echo sprintf( '<h3>%s</h3>%s', __( '', '_s' ), _s_get_addtoany_share_icons() );
+
+echo _s_get_addtoany_share_icons();
 
 /* Omit closing PHP tag at the end of PHP files to avoid "headers already sent" issues. */
