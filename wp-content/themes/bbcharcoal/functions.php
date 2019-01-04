@@ -306,3 +306,24 @@ function override_default_checkout_fields( $address_fields ) {
 	$address_fields['billing']['billing_phone']['placeholder'] = 'Phone (Optional)';
 	return $address_fields;
 }
+
+// Page under construction shortcode
+
+function under_construction_function() {
+	ob_start();
+	?>
+	<div class="under-construction-wrapper">
+		<div>
+			<h2>Coming Soon</h2>
+
+			<p>We're updating our store locator to give you better information on where to find our products.</p>
+			<p class="bold">Please see a list of our retailers below to find out great products in a store near you.</p>
+			 <?php get_template_part( 'template-parts/section', 'logos' ); ?>
+		</div>
+	</div>
+	<?php
+	$display_posts = ob_get_clean();
+	return $display_posts;
+}
+
+add_shortcode( 'under_construction', 'under_construction_function' );

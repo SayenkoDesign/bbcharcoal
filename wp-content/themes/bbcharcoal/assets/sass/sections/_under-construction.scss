@@ -1,0 +1,16 @@
+.under-construction-wrapper {
+  text-align: center;
+
+  p {
+    text-transform: uppercase;
+
+    &.bold {
+      font-size: 18px;
+      line-height: 32px;
+      color: $red;
+      margin-bottom: 22px;
+      font-family: bundayslab-bold;
+      text-transform: uppercase;
+    }
+  }
+}
